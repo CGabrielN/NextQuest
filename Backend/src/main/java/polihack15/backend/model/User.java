@@ -4,6 +4,7 @@ package polihack15.backend.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -33,4 +34,22 @@ public class User {
     @Column(name = "password_hash")
     private String password_hash;
 
+    @NotNull
+    @Length(max = 255, message = "Full name is too long")
+    @Column(name = "fullName")
+    private String fullName;
+
+    @NotNull
+    @Length(max = 12, message = "Phone number is too long")
+    @Column(name = "phoneNumber")
+    private String phoneNumber;
+
+    @NotNull
+    @Length(max = 255, message = "Domain is too long")
+    @Column(name = "domain")
+    private String domain;
+
+    @ManyToOne
+    @JoinColumn(name = "id_roadmap")
+    private Roadmap roadmap;
 }
