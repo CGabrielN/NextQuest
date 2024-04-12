@@ -4,16 +4,13 @@ import jakarta.validation.constraints.NotNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-import polihack15.backend.model.CreditQuestion;
 import polihack15.backend.model.CreditTest;
-import polihack15.backend.model.Question;
-import polihack15.backend.model.Test;
-
-import java.util.List;
 
 @Repository
-public interface RepoQuestion extends JpaRepository<Question, Long>{
+public interface RepoCreditTest extends JpaRepository<CreditTest, Long> {
 
-
+    @NotNull
+    @Query("SELECT t FROM CreditTest t WHERE t.domain = :domain")
+    CreditTest findByDomain(String domain);
 
 }

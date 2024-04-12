@@ -20,4 +20,8 @@ public class ServiceUser {
     public User save(User user){
         return repoUsers.save(user);
     }
+
+    public boolean findPassedTestsByUserAndDomain(Long userId, String domain){
+        return !repoUsers.findPassedTestsByUserAndDomain(userId, domain).isEmpty();
+    }
 }

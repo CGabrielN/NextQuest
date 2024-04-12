@@ -1,6 +1,5 @@
 package polihack15.backend.model;
 
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -12,26 +11,26 @@ import org.hibernate.validator.constraints.Length;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "companies", schema = "public")
-public class Company {
+@Table(name = "credit_tests", schema = "public")
+public class CreditTest {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "company_id")
+    @Column(name = "test_id")
     private Long id;
 
     @NotNull
-    @Length(max = 255, message = "Company name is too long")
+    @Length(max = 255, message = "Test name is too long")
     @Column(name = "name")
     private String name;
 
     @NotNull
-    @Length(max = 255, message = "Emails domains is too long")
-    @Column(name = "emails_domains")
-    private String emailDomains;
+    @Column(name = "points" , columnDefinition = "float default 0.0")
+    private double points;
 
     @NotNull
-    @Length(max = 255, message = "Domain is too long")
-    @Column(name = "domain")
+    @Column(name = "domain", unique = true)
     private String domain;
+
+
 }
