@@ -11,6 +11,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
+import java.time.LocalDateTime;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -36,18 +38,22 @@ public class User {
 
     @NotNull
     @Length(max = 255, message = "Full name is too long")
-    @Column(name = "fullName")
+    @Column(name = "full_name")
     private String fullName;
 
     @NotNull
     @Length(max = 12, message = "Phone number is too long")
-    @Column(name = "phoneNumber")
+    @Column(name = "phone_number")
     private String phoneNumber;
 
     @NotNull
     @Length(max = 255, message = "Domain is too long")
     @Column(name = "domain")
     private String domain;
+
+    @Column(name = "start_roadmap_date")
+    private LocalDateTime startRoadmapDate;
+
 
     @ManyToOne
     @JoinColumn(name = "id_roadmap")

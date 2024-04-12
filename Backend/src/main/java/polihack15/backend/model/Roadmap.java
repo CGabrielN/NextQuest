@@ -41,8 +41,13 @@ public class Roadmap {
     @Column(name = "price")
     private int price;
 
+    @NotNull
+    @Column(name = "days")
+    private int days;
+
     @ManyToOne
     @JoinColumn(name = "id_company")
     private Company company;
+
 
 }
