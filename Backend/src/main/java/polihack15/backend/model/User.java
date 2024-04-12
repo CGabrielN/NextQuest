@@ -58,4 +58,8 @@ public class User {
     @ManyToOne
     @JoinColumn(name = "id_roadmap")
     private Roadmap roadmap;
+
+    @ManyToOne
+    @JoinColumn(name = "id_company")
+    private Company company;
 }

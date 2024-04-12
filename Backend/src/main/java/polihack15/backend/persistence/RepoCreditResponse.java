@@ -4,16 +4,15 @@ import jakarta.validation.constraints.NotNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-import polihack15.backend.model.CreditQuestion;
-import polihack15.backend.model.CreditTest;
-import polihack15.backend.model.Question;
-import polihack15.backend.model.Test;
+import polihack15.backend.model.CreditResponse;
 
 import java.util.List;
 
 @Repository
-public interface RepoQuestion extends JpaRepository<Question, Long>{
+public interface RepoCreditResponse extends JpaRepository<CreditResponse, Long> {
 
-
+    @NotNull
+    @Query("SELECT r FROM CreditResponse r WHERE r.question.id = :questionId")
+    List<CreditResponse> findResponsesForQuestion(Long questionId);
 
 }

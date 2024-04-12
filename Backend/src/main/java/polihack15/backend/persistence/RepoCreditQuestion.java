@@ -6,14 +6,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import polihack15.backend.model.CreditQuestion;
 import polihack15.backend.model.CreditTest;
-import polihack15.backend.model.Question;
-import polihack15.backend.model.Test;
 
 import java.util.List;
 
 @Repository
-public interface RepoQuestion extends JpaRepository<Question, Long>{
+public interface RepoCreditQuestion extends JpaRepository<CreditQuestion, Long> {
 
-
-
+    @NotNull
+    @Query("SELECT q FROM CreditQuestion q WHERE q.test = :test")
+    List<CreditQuestion> findByTest(CreditTest test);
 }
