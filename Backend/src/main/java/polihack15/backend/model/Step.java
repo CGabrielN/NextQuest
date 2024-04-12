@@ -33,6 +33,9 @@ public class Step {
     @Column(name = "details")
     private String details;
 
+    @Column(name = "is_done")
+    private boolean isDone;
+
     @ManyToOne
     @JoinColumn(name = "id_roadmap")
     private Roadmap roadmap;
