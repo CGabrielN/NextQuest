@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            background-image: url('../assets/background.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        div {
+            background-color: rgba(0, 0, 0, 0.3);
+            height: 789px;
+            width: 1368px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 40px;
+        }
+
+        h1 {
+            color: black;
+            font-size: 70px;
+            font-family: Roboto, serif;
+            margin-bottom: 40px;
+        }
+
+        #loginForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        #loginForm input {
+            font-size: 20px;
+            font-family: Roboto, serif;
+            border-radius: 20px;
+            width: 500px;
+            padding: 10px;
+            margin: 40px 0;
+            height: 36px;
+            margin-top: 50px;
+        }
+
+        #loginForm button {
+            font-size: 31px;
+            font-family: Roboto, serif;
+            border-radius: 20px;
+            width: 277px;
+            height: 95px;
+            background-color: rgb(155, 182, 165);
+            padding: 10px;
+            margin: 40px;
+            margin-top: 120px;
+            cursor: pointer;
+            border: 0;
+        }
+
+        .email-input {
+            background-image: url('../assets/user.png');
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            background-size: 30px;
+            padding-left: 50px;
+            padding-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .email-input::placeholder {
+            padding-left: 40px;
+        }
+
+        .password-input {
+            background-image: url('../assets/lock.png');
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            background-size: 30px;
+            padding-left: 50px;
+            padding-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .password-input::placeholder {
+            padding-left: 40px;
+        }
+
+        .register-link {
+            font-size: 31px;
+            font-family: Roboto, serif;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form id="loginForm">
+        <h1>Welcome back!</h1>
+        <input type="email" id="email" class="email-input" placeholder="Email" required>
+        <input type="password" class="password-input" id="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+    <a href="register.html" class="register-link">New here? Create an account!</a>
+</div>
+<script src="../scripts/login.js"></script>
+</body>
+</html>

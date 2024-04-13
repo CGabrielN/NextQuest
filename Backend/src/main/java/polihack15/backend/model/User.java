@@ -54,7 +54,6 @@ public class User {
     @Column(name = "start_roadmap_date")
     private LocalDateTime startRoadmapDate;
 
-
     @ManyToOne
     @JoinColumn(name = "id_roadmap")
     private Roadmap roadmap;

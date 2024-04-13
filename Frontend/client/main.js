@@ -10,7 +10,7 @@ function createWindow() {
         },
     });
 
-    win.loadFile(path.join(__dirname, 'html-files/index.html'));
+    win.loadFile(path.join(__dirname, 'html-files/login.html'));
     win.setMenuBarVisibility(false);
     win.webContents.openDevTools();
 }
