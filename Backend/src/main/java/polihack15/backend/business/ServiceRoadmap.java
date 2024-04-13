@@ -28,4 +28,16 @@ public class ServiceRoadmap {
     public List<Roadmap> getFreeRoadmapsByCompany(String company) {
         return repoRoadmap.findFreeByCompany(company);
     }
+
+    public List<Roadmap> getAllRoadmaps() {
+        return repoRoadmap.findAll();
+    }
+
+    public List<Roadmap> getAllRoadmapsByCompany(String company) {
+        return repoRoadmap.findAllByCompany(company);
+    }
+
+    public List<Roadmap> getAllRoadmapsByDomain(String domain) {
+        return repoRoadmap.findAllByDomain(domain);
+    }
 }
