@@ -6,9 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Backend.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Backend.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Backend.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Backend.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/PoliHack_V15.iml" filepath="$PROJECT_DIR$/.idea/PoliHack_V15.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/polihack15.Backend.iml" filepath="$PROJECT_DIR$/.idea/modules/polihack15.Backend.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/polihack15.Backend.main.iml" filepath="$PROJECT_DIR$/.idea/modules/polihack15.Backend.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/polihack15.Backend.test.iml" filepath="$PROJECT_DIR$/.idea/modules/polihack15.Backend.test.iml" />
     </modules>
   </component>
 </project>
