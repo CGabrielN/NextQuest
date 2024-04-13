@@ -27,6 +27,11 @@ public class Roadmap {
     private String name;
 
     @NotNull
+    @Length(max = 255, message = "Path is too long")
+    @Column(name = "img_path")
+    private String imgPath;
+
+    @NotNull
     @Length(max = 255, message = "Domain is too long")
     @Column(name = "domain")
     private String domain;
