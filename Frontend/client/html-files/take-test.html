@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, serif;
+    }
+
+    #headerLabel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 143px;
+        background-color: #45B2B9;
+        font-family: Roboto, serif;
+        font-size: 20px;
+        padding-left: 20px;
+        font-weight: bold;
+    }
+
+    .title_label {
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    #back_button {
+        background-color: #728AAF;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        height: 45px;
+        width: 100px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    #bodyContainer {
+        display: flex;
+        flex-direction: row;
+        height: calc(100vh - 143px);
+    }
+
+    #dashboard {
+        height: calc(100vh - 143px);
+        flex: 1;
+        background-color: #bbffff;
+        align-content: center;
+        text-align: center;
+        width: 378px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 20px;
+        overflow: auto;
+    }
+
+    #mainContent {
+        width: 1542px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow: auto;
+    }
+
+    #mainContent p {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 50px;
+        height: 20px;
+    }
+
+    #dashboardButton {
+        background-color: #728AAF;
+        color: white;
+        border: none;
+        border-radius: 62px;
+        height: 45px;
+        width: 170px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 666px;
+        margin-bottom: 14px;
+    }
+
+    #dropdownMenu {
+        background-color: rgba(131, 229, 229, 0.53);
+        margin-top: 20px;
+        width: 200px;
+        height: 40px;
+        padding: 5px;
+        font-size: 16px;
+        border-radius: 20px;
+    }
+
+    #radioContainer {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 480px;
+    }
+
+    #radioContainer label {
+        display: block;
+        padding-left: 10px;
+    }
+
+    #radioContainer div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    #para {
+        margin-top: 15px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #para p {
+        font-size: 60px;
+        font-weight: bold;
+    }
+
+    .input_ {
+        margin-top: 40px;
+        margin-left: 20px;
+        font-size: 30px;
+    }
+
+    #options {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 60px;
+    }
+
+    #bottom_buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #previous_button {
+        background-color: #728AAF;
+        color: white;
+        border: none;
+        border-radius: 32px;
+        height: 45px;
+        width: 170px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+
+    #next_button {
+        background-color: #728AAF;
+        color: white;
+        border: none;
+        border-radius: 32px;
+        height: 45px;
+        width: 170px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+</style>
+
+<body>
+<header>
+    <div id="headerLabel">
+        <label id="user_name">User Name</label>
+        <label class="title_label">Create Test</label>
+        <button id="back_button">Back</button>
+    </div>
+</header>
+<div id="bodyContainer">
+    <div id="dashboard">
+        <label for="dropdownMenu"></label><select id="dropdownMenu">
+        <option value="" disabled selected>Questions</option>
+        <option>Questions</option>
+    </select>
+        <button id="dashboardButton">Finish test</button>
+    </div>
+    <div id="mainContent">
+
+        <div id="options">
+            <div id="para">
+                <p>NR.Question</p>
+            </div>
+
+            <div id="radioContainer">
+                <div class="input_">
+                    <input type="radio" id="option1" name="answer" value="option1">
+                    <label for="option1">Option 1</label>
+                </div>
+                <div class="input_">
+                    <input type="radio" id="option2" name="answer" value="option2">
+                    <label for="option2">Option 2</label>
+                </div>
+                <div class="input_">
+                    <input type="radio" id="option3" name="answer" value="option3">
+                    <label for="option3">Option 3</label>
+                </div>
+                <div class="input_">
+                    <input type="radio" id="option4" name="answer" value="option4">
+                    <label for="option4">Option 4</label>
+                </div>
+            </div>
+        </div>
+
+        <div id="bottom_buttons">
+            <div>
+                <button id="previous_button">Previous</button>
+            </div>
+            <div>
+                <button id="next_button">Next</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../scripts/take-test.js"></script>
+</body>
+</html>
