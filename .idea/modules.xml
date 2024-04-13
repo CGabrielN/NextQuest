@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Backend/Backend.iml" filepath="$PROJECT_DIR$/Backend/Backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Backend.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Backend.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Backend.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Backend.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/PoliHack_V15.iml" filepath="$PROJECT_DIR$/.idea/PoliHack_V15.iml" />
     </modules>
   </component>
 </project>

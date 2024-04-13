@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/createTestStyle.css">
+</head>
+<body>
+
+<header>
+    <div id="headerLabel" >
+        <label id="user_name">User Name</label>
+        <label class="title_label">Create Test</label>
+        <button id="back_button" >Back</button>
+    </div>
+</header>
+<div id = "container">
+    <div id="leftDivs">
+        <div id="topDiv">
+            <label id="addQuestionLabel">Add a question</label>
+            <div class="inputGroup">
+                <label>Enter Question</label>
+                <input id="questionInput" type="text" placeholder="Enter question...">
+            </div>
+            <div class="inputGroup">
+                <label>Enter First Response</label>
+                <input id="response1Input" type="text" placeholder="...">
+            </div>
+            <div class="inputGroup">
+                <label>Enter Second Response</label>
+                <input id="response2Input" type="text" placeholder="...">
+            </div>
+            <div class="inputGroup">
+                <label>Enter Third Response</label>
+                <input id="response3Input" type="text" placeholder="...">
+            </div>
+            <div class="inputGroup">
+                <label>Enter Fourth Response</label>
+                <input id="response4Input" type="text" placeholder="...">
+            </div>
+            <div class="inputGroup">
+                <label>Enter correct answer</label>
+                <input id="correctAnswerInput" type="text" placeholder="1,2,3 or 4">
+            </div>
+            <button id="createQuestionButton">Create Question</button>
+        </div>
+
+        <div id="bottomDiv">
+            <label id="createTestLabel">Create Test</label>
+            <input id="testNameInput" type="text" placeholder="Enter test name...">
+            <button id="createTestButton">Create Test</button>
+        </div>
+    </div>
+
+    <div id="rightDiv">
+        <label id="questionsTitle"> Your created test</label>
+        <div id="questionsContainer">
+
+        </div>
+    </div>
+</div>
+
+<script src="../scripts/createTest.js"></script>
+
+</body>
+</html>

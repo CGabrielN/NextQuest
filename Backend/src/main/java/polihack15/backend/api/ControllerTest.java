@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import polihack15.backend.business.ServiceTest;
 import polihack15.backend.model.CreditTestDTO;
+import polihack15.backend.model.Test;
 import polihack15.backend.model.TestDTO;
 
 @RestController
@@ -23,6 +24,11 @@ public class ControllerTest {
     @GetMapping("/getTestForStep/{id_step}")
     public ResponseEntity<TestDTO> getTestForStep(@PathVariable Long id_step) {
         return ResponseEntity.ok(serviceTest.getTestForStep(id_step));
+    }
+
+    @PostMapping("/test")
+    public ResponseEntity<Test> save(@RequestBody Test test) {
+        return ResponseEntity.ok(serviceTest.save(test));
     }
 
 }
