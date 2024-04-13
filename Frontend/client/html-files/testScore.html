@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-family: Roboto, serif;
+        }
+        body{
+            height: 1080px;
+            width: 1920px;
+        }
+
+        #headerLabel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 125px;
+            background-color: #a9dcdf;
+            font-size: 20px;
+            padding-left: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .title_label {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            flex-grow: 1;
+            padding-right: 40px;
+        }
+
+        #back_button{
+            background-color: #728AAF;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            height: 45px;
+            width: 100px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        #scoreLabel{
+            font-size: 100px;
+            font-weight: bold;
+            margin: 40px 70px 70px 70px;
+        }
+
+        #goBackToRoadmap{
+            width: 350px;
+            height: 60px;
+            background-color: #728AAF;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 24px;
+            margin-top: 80px;
+        }
+
+        #contentContainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 955px;
+
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div id="headerLabel" >
+        <label id="user_name">User Name</label>
+        <label class="title_label">Your Result</label>
+    </div>
+</header>
+
+<div id="contentContainer">
+    <label id="scoreLabel">
+        Your score is: 5/10
+    </label>
+    <button id="goBackToRoadmap" >
+        Go back to roadmap
+    </button>
+</div>
+
+</body>
+</html>
