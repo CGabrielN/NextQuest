@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="StylesheetHORI_ROADMAP.css">
+</head>
+<body>
+<div class="timeline">
+    <button id="addStep">Add Step</button>
+    <div class="container left">
+        <div class="content">
+            <h2>2017</h2>
+            <p>Lorem ipsum..</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h2>2016</h2>
+            <p>Lorem ipsum..</p>
+        </div>
+    </div>
+</div>
+<script>
+    let stepCount = 0;
+
+    document.getElementById('addStep').addEventListener('click', function() {
+        // Create a new container
+        var container = document.createElement('div');
+        container.className = stepCount % 2 === 0 ? 'container left' : 'container right';
+
+        // Create the content div
+        var content = document.createElement('div');
+        content.className = 'content';
+
+        // Create the year heading
+        var year = document.createElement('h2');
+        year.textContent = 'New Year'; // Replace this with the actual year
+
+        // Create the text
+        var text = document.createElement('p');
+        text.textContent = 'New Text'; // Replace this with the actual text
+
+        // Append the year and text to the content div
+        content.appendChild(year);
+        content.appendChild(text);
+
+        // Append the content div to the container
+        container.appendChild(content);
+
+        // Append the container to the timeline
+        document.querySelector('.timeline').appendChild(container);
+
+        // Increment the step count
+        stepCount++;
+    });
+</script>
+</body>
+</html>
