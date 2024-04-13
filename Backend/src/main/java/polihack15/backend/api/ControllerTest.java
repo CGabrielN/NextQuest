@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import polihack15.backend.business.ServiceTest;
+import polihack15.backend.model.CreditTestDTO;
 import polihack15.backend.model.TestDTO;
 
 @RestController
@@ -15,8 +16,13 @@ public class ControllerTest {
     private ServiceTest serviceTest;
 
     @GetMapping("/creditTest/{domain}")
-    public ResponseEntity<TestDTO> getCreditTestForDomain(@PathVariable String domain) {
+    public ResponseEntity<CreditTestDTO> getCreditTestForDomain(@PathVariable String domain) {
         return ResponseEntity.ok(serviceTest.getCreditTestForDomain(domain));
+    }
+
+    @GetMapping("/getTestForStep/{id_step}")
+    public ResponseEntity<TestDTO> getTestForStep(@PathVariable Long id_step) {
+        return ResponseEntity.ok(serviceTest.getTestForStep(id_step));
     }
 
 }

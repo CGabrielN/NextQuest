@@ -10,10 +10,10 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class TestDTO {
+public class CreditTestDTO {
 
-    private Test test;
+    private CreditTest test;
 
-    private HashMap<Question, List<Response>> questions;
+    private HashMap<CreditQuestion, List<CreditResponse>> questions;
 
 }
