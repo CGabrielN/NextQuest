@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Backend/Backend.iml" filepath="$PROJECT_DIR$/Backend/Backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Backend.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Backend.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Backend.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Backend.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/PoliHack_V15.iml" filepath="$PROJECT_DIR$/.idea/PoliHack_V15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/polihack15.Backend.main.iml" filepath="$PROJECT_DIR$/.idea/modules/polihack15.Backend.main.iml" />
     </modules>
   </component>
 </project>

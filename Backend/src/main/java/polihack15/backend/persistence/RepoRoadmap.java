@@ -26,4 +26,12 @@ public interface RepoRoadmap extends JpaRepository<Roadmap, Long> {
     @NotNull
     @Query("SELECT r FROM Roadmap r WHERE r.company = :company and r.price = 0")
     List<Roadmap> findFreeByCompany(@NotNull String company);
+
+    @NotNull
+    @Query("SELECT r FROM Roadmap r inner join Company c on r.company.id = c.id and c.name = :company")
+    List<Roadmap> findAllByCompany(@NotNull String company);
+
+    @NotNull
+    @Query("Select r from Roadmap r where r.domain LIKE %:domain%")
+    List<Roadmap> findAllByDomain(@NotNull String domain);
 }
