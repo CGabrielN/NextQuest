@@ -3,21 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="StylesheetHORI_ROADMAP.css">
+    <link rel="stylesheet" href="StylesheetHORI_ROADMAP.css"><style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, serif;
+    }
+
+    #headerLabel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 143px;
+        background-color: #a9dcdf;
+        font-size: 20px;
+        padding-left: 20px;
+        font-weight: bold;
+    }
+
+    .title_label {
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    #back_button{
+        background-color: #728AAF;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        height: 65px;
+        width: 150px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+    </style>
 </head>
 <body>
+<header>
+    <div id="headerLabel" >
+        <label id="user_name">User Name</label>
+        <label class="title_label">Add Roadmap</label>
+        <button id="back_button" >Go back</button>
+    </div>
+</header>
+<button id="saveRoadmap" class="saveRoadmap">Save Roadmap</button>
 <div class="timeline">
-    <button id="addStep">Add Step</button>
+    <button id="addStep" class="addStep">Add Step</button>
     <div class="container left">
         <div class="content">
-            <h2>2017</h2>
-            <p>Lorem ipsum..</p>
+            <input placeholder="Name">
+            <input placeholder="Position">
+            <input placeholder="Add Content">
+            <button>Create Test</button>
         </div>
     </div>
     <div class="container right">
         <div class="content">
-            <h2>2016</h2>
-            <p>Lorem ipsum..</p>
+            <input placeholder="Name">
+            <input placeholder="Position">
+            <input placeholder="Add Content">
+            <button>Create Test</button>
         </div>
     </div>
 </div>
@@ -33,17 +81,24 @@
         var content = document.createElement('div');
         content.className = 'content';
 
-        // Create the year heading
-        var year = document.createElement('h2');
-        year.textContent = 'New Year'; // Replace this with the actual year
+        // Create the input fields and button
+        var nameInput = document.createElement('input');
+        nameInput.placeholder = 'Name';
 
-        // Create the text
-        var text = document.createElement('p');
-        text.textContent = 'New Text'; // Replace this with the actual text
+        var positionInput = document.createElement('input');
+        positionInput.placeholder = 'Position';
 
-        // Append the year and text to the content div
-        content.appendChild(year);
-        content.appendChild(text);
+        var contentInput = document.createElement('input');
+        contentInput.placeholder = 'Add Content';
+
+        var testButton = document.createElement('button');
+        testButton.textContent = 'Create Test';
+
+        // Append the input fields and button to the content div
+        content.appendChild(nameInput);
+        content.appendChild(positionInput);
+        content.appendChild(contentInput);
+        content.appendChild(testButton);
 
         // Append the content div to the container
         container.appendChild(content);
@@ -53,6 +108,41 @@
 
         // Increment the step count
         stepCount++;
+    });
+
+    document.getElementById('saveRoadmap').addEventListener('click', function() {
+        // Hide the timeline
+        document.querySelector('.timeline').style.display = 'none';
+
+        // Create a new container
+        var container = document.createElement('div');
+        container.className = 'inputContainer';
+
+        // Create the input fields
+        var nameInput = document.createElement('input');
+        nameInput.placeholder = 'Roadmap Name';
+
+        var domainInput = document.createElement('input');
+        domainInput.placeholder = 'Domain';
+
+        var daysInput = document.createElement('input');
+        daysInput.placeholder = 'Available Days';
+
+        var difficultyInput = document.createElement('input');
+        difficultyInput.placeholder = 'Difficulty Level';
+
+        var priceInput = document.createElement('input');
+        priceInput.placeholder = 'Price';
+
+        // Append the input fields to the container
+        container.appendChild(nameInput);
+        container.appendChild(domainInput);
+        container.appendChild(daysInput);
+        container.appendChild(difficultyInput);
+        container.appendChild(priceInput);
+
+        // Append the container to the body
+        document.body.appendChild(container);
     });
 </script>
 </body>
