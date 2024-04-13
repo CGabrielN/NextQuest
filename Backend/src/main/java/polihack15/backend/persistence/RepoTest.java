@@ -10,4 +10,7 @@ import polihack15.backend.model.Test;
 @Repository
 public interface RepoTest extends JpaRepository<Test, Long>{
 
+    @NotNull
+    @Query("SELECT t FROM Test t WHERE t.step.id = :id_step")
+    Test findByStep(Long id_step);
 }

@@ -14,6 +14,8 @@ import java.util.List;
 @Repository
 public interface RepoQuestion extends JpaRepository<Question, Long>{
 
-
+    @NotNull
+    @Query("SELECT q FROM Question q WHERE q.test = :test")
+    List<Question> findByTest(Test test);
 
 }
