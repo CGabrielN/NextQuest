@@ -1,3 +1,4 @@
+
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -9,6 +10,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         .then(response => {
             if (response.ok) {
                 statusLabel.textContent = 'Success';
+                window.location.href = 'createTest.html?data= ' + encodeURIComponent(1);
             } else {
                 statusLabel.textContent = 'Failed';
             }

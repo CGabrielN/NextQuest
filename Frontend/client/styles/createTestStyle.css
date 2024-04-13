@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Roboto, serif;
+}
+
+#headerLabel {
+    width: 1920px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 125px;
+    background-color: #a9dcdf;
+    font-size: 20px;
+    padding-left: 20px;
+    font-weight: bold;
+    margin: 0;
+
+}
+
+.title_label {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#back_button{
+    background-color: #728AAF;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    height: 45px;
+    width: 100px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#container{
+    display: flex;
+}
+
+#leftDivs{
+    display: flex;
+    flex-direction: column;
+}
+
+#bottomDiv {
+    width: 378px;
+    height: 234px;
+    background-color: #bbffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+#addQuestionLabel {
+    width: 326px;
+    height: 61px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+#topDiv {
+    width: 378px;
+    height: 703px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DDFFFF;
+}
+
+.inputGroup {
+    width: 326px;
+    height: 61px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#createQuestionButton {
+    width: 280px;
+    height: 40px;
+    background-color: #728AAF;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-top: 65px;
+}
+
+
+.inputGroup label {
+    width: 200px;
+    height: 14px;
+    margin: 10px 10px 10px 0;
+}
+
+.inputGroup input{
+    width: 326px;
+    height: 27px;
+    padding-left: 5px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid #005EF5;
+}
+
+#createTestLabel{
+    width: 326px;
+    height: 61px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+#bottomDiv input{
+    width: 326px;
+    height: 32px;
+    padding-left: 5px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid #005EF5;
+    font-size: 18px;
+    margin: 19px 0;
+}
+
+#createTestButton {
+    width: 280px;
+    height: 50px;
+    background-color: #728AAF;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#rightDiv {
+    width: 1542px;
+    height: 937px;
+    /*right: 0;*/
+}
+
+#questionsTitle{
+    width: 1542px;
+    height: 60px;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 40px 0 0 0;
+    padding-left: 40px;
+}
+
+#questionsContainer{
+    height: 837px;
+    overflow: auto;
+}
+
+#questionsContainer > label{
+    font-size: 30px;
+
+}
+
+#questionsContainer > div {
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+/* Space out the items inside each question */
+#questionsContainer > div > div  {
+    margin-top: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+
+

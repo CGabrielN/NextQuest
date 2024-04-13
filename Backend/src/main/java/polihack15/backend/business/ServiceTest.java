@@ -20,6 +20,11 @@ public class ServiceTest {
     private final RepoQuestion repoQuestion;
     private final RepoResponse repoResponse;
 
+    public Test save(Test test) {
+        return repoTest.save(test);
+    }
+
+
     public CreditTestDTO getCreditTestForDomain(String domain) {
         var testDTO = new CreditTestDTO();
         HashMap<CreditQuestion, List<CreditResponse>> questionsMap = new HashMap<>();
