@@ -46,7 +46,7 @@
 <body>
 <header>
     <div id="headerLabel" >
-        <label id="user_name">User Name</label>
+        <label id="user_name">Admin</label>
         <label class="title_label">Add Roadmap</label>
         <button id="back_button" >Go back</button>
     </div>
@@ -71,81 +71,8 @@
         </div>
     </div>
 </div>
-<script>
-    let stepCount = 0;
+<script src="../scripts/create-roadmap.js">
 
-    document.getElementById('addStep').addEventListener('click', function() {
-        // Create a new container
-        var container = document.createElement('div');
-        container.className = stepCount % 2 === 0 ? 'container left' : 'container right';
-
-        // Create the content div
-        var content = document.createElement('div');
-        content.className = 'content';
-
-        // Create the input fields and button
-        var nameInput = document.createElement('input');
-        nameInput.placeholder = 'Name';
-
-        var positionInput = document.createElement('input');
-        positionInput.placeholder = 'Position';
-
-        var contentInput = document.createElement('input');
-        contentInput.placeholder = 'Add Content';
-
-        var testButton = document.createElement('button');
-        testButton.textContent = 'Create Test';
-
-        // Append the input fields and button to the content div
-        content.appendChild(nameInput);
-        content.appendChild(positionInput);
-        content.appendChild(contentInput);
-        content.appendChild(testButton);
-
-        // Append the content div to the container
-        container.appendChild(content);
-
-        // Append the container to the timeline
-        document.querySelector('.timeline').appendChild(container);
-
-        // Increment the step count
-        stepCount++;
-    });
-
-    document.getElementById('saveRoadmap').addEventListener('click', function() {
-        // Hide the timeline
-        document.querySelector('.timeline').style.display = 'none';
-
-        // Create a new container
-        var container = document.createElement('div');
-        container.className = 'inputContainer';
-
-        // Create the input fields
-        var nameInput = document.createElement('input');
-        nameInput.placeholder = 'Roadmap Name';
-
-        var domainInput = document.createElement('input');
-        domainInput.placeholder = 'Domain';
-
-        var daysInput = document.createElement('input');
-        daysInput.placeholder = 'Available Days';
-
-        var difficultyInput = document.createElement('input');
-        difficultyInput.placeholder = 'Difficulty Level';
-
-        var priceInput = document.createElement('input');
-        priceInput.placeholder = 'Price';
-
-        // Append the input fields to the container
-        container.appendChild(nameInput);
-        container.appendChild(domainInput);
-        container.appendChild(daysInput);
-        container.appendChild(difficultyInput);
-        container.appendChild(priceInput);
-
-        // Append the container to the body
-        document.body.appendChild(container);
-    });
 </script>
 </body>
 </html>

@@ -88,7 +88,7 @@
 
         .rectangle2 input[type="checkbox"] {
             background: transparent;
-            margin-top: 0px;
+            margin-top: 0;
             border: 2px solid #005EF5;
         }
 
@@ -101,7 +101,7 @@
             border: none;
             cursor: pointer;
             align-self: center;
-            margin: 0px;
+            margin: 0;
         }
 
         #main {
@@ -109,44 +109,59 @@
             height: calc(100vh - 143px); /* Adjust this value as needed */
         }
 
+        #create_roadmap{
+            background-color: #728AAF;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            height: 65px;
+            width: 150px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
     </style>
 </head>
-<body onload="populateContainer(52);">
+<body onload="populateContainer();">
 <header>
     <div id="headerLabel" >
-        <label id="user_name">User Name</label>
+        <label id="user_name">Admin</label>
         <label class="title_label">Roadmaps</label>
         <button id="back_button" >Go to your Roadmap</button>
     </div>
 </header>
 <div id="main">
-<section id="section">
+<section id="section" style="text-align: center">
     <div class="rectangle1">
         <h2 align="center">Your Roadmap</h2>
         <div class="card p-0" data-name="nature">
-            <img src="../assets/corgi.jpg" alt="img">
+            <img src="../assets/cartof.png" alt="img">
         </div>
+        <button style="margin-top: 20px; margin-bottom: 20px" id="create_roadmap" >Create Roadmap</button>
     </div>
     <div class="rectangle2">
         <h2 align="center">Search for a Roadmap</h2>
         <input type="text" id="domainSearch" name="domainSearch" placeholder=" Search by domain:" align="center">
-        <input type="text" id="companySearch" name="companySearch" placeholder=" Search by company:" align="center">
-        <div>
-            <label for="paid">Paid</label>
-        <input type="checkbox" id="paid" name="paid">
-        <label for="free">Free</label>
-        <input type="checkbox" id="free" name="free">
-        <input type="submit" value="Search" align-items="center">
-        </div>
+       <div>
+           <label for="paid">Paid</label>
+           <input type="checkbox" id="paid" name="paid">
+           <label for="free">Free</label>
+           <input type="checkbox" id="free" name="free">
+       </div>
+        <input id="search_button" type="submit" value="Search" align-items="center">
     </div>
 </section>
     <div class="container">
 
-        <!-- Filterable Images / Cards Section -->
         <div class="row px-2 mt-4 gap-3" id="filterable-cards">
         </div>
 
     </div>
 </div>
+
+<script src="../scripts/roadmaps.js"></script>
+
 </body>
 </html>

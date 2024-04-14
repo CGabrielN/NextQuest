@@ -21,6 +21,7 @@
             font-size: 40px;
             z-index: 1; /* Set the z-index of the top div */
         }
+
         .main_div {
             position: fixed;
             top: 100px;
@@ -30,6 +31,7 @@
             background-color: #e9ecef;
             overflow: auto;
         }
+
         .button {
             position: absolute;
             right: 10px;
@@ -39,14 +41,17 @@
             font-size: 20px;
             font-family: 'Roboto', sans-serif;
         }
+
         .content div {
             margin-bottom: 10px;
         }
+
         .content div a {
             text-decoration: none;
             color: black;
             font-family: 'Roboto', sans-serif;
         }
+
         .content div a:hover {
             color: grey;
         }
@@ -60,83 +65,22 @@
 
 <div class="main_div">
     <div class="timeline">
-<!--        <button id="addStep">Add Step</button>-->
-<!--        <div class="container left">-->
-<!--            <div class="content">-->
-<!--                <h2>2017</h2>-->
-<!--                <p>Lorem ipsum..</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="container right">-->
-<!--            <div class="content">-->
-<!--                <h2>2016</h2>-->
-<!--                <p>Lorem ipsum..</p>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <button id="addStep">Add Step</button>-->
+        <!--        <div class="container left">-->
+        <!--            <div class="content">-->
+        <!--                <h2>2017</h2>-->
+        <!--                <p>Lorem ipsum..</p>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        <div class="container right">-->
+        <!--            <div class="content">-->
+        <!--                <h2>2016</h2>-->
+        <!--                <p>Lorem ipsum..</p>-->
+        <!--            </div>-->
+        <!--        </div>-->
     </div>
 </div>
-<script>
-    let stepCount = 0;
-    let totalSteps = 4; // Set the total number of steps you want to create
+<script src="../scripts/show_tour_roadmap.js"></script>
 
-    // Function to create a step
-    function createStep(name, courses) {
-        // Create a new container
-        var container = document.createElement('div');
-        container.className = stepCount % 2 === 0 ? 'container left' : 'container right';
-
-        // Create the content div
-        var contentDiv = document.createElement('div');
-        contentDiv.className = 'content';
-
-        // Create the name heading
-        var nameElement = document.createElement('h2');
-        nameElement.textContent = name;
-
-        // Append the name to the content div
-        contentDiv.appendChild(nameElement);
-
-        var courseList = document.createElement('ul');
-
-        // Loop through the courses
-        for (let i = 0; i < courses.length; i++) {
-            //var courseDiv = document.createElement('li');
-            // Create a div for the course link
-            var courseDiv = document.createElement('div');
-
-            // Create the course link
-            var link = document.createElement('a');
-            link.href = courses[i].link;
-            link.textContent = courses[i].name; // Set the link text to the course name
-
-            // Append the link to the course div
-            courseDiv.appendChild(link);
-
-            // Append the course div to the content div
-            contentDiv.appendChild(courseDiv);
-        }
-
-        // Append the content div to the container
-        container.appendChild(contentDiv);
-
-        // Append the container to the timeline
-        document.querySelector('.timeline').appendChild(container);
-
-        // Increment the step count
-        stepCount++;
-    }
-
-    // Call the createStep function with the name and courses for each step
-    createStep('Step 1', [
-        { name: 'Course 1 for Step 1', link: 'http://example.com/course1.pdf' },
-        { name: 'Course 2 for Step 1', link: 'http://example.com/course2.pdf' },
-        { name: 'Test', link: 'http://example.com/course2.pdf' }
-    ]);
-    createStep('Step 2', [
-        { name: 'Course 1 for Step 2', link: 'http://example.com/course3.pdf' },
-        { name: 'Course 2 for Step 2', link: 'http://example.com/course4.pdf' },
-        { name: 'Test', link: 'http://example.com/course4.pdf' }
-    ]);
-</script>
 </body>
 </html>

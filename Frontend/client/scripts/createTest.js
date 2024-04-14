@@ -1,11 +1,9 @@
 let questions = [];
 
-
-
 document.addEventListener('DOMContentLoaded', (event) => {
     const backButton = document.getElementById('back_button');
     backButton.addEventListener('click', () => {
-        window.history.back();
+        window.location.href = 'roadmaps.html';
     });
 });
 
@@ -80,7 +78,7 @@ document.getElementById('createTestButton').addEventListener('click', async () =
     const testName = document.getElementById('testNameInput').value;
 
     let urlParams = new URLSearchParams(window.location.search);
-    let step = urlParams.get('data');
+    let step = urlParams.get('step');
 
     console.log(step);
     // Create the test
@@ -93,7 +91,7 @@ document.getElementById('createTestButton').addEventListener('click', async () =
             test_id: null,
             name: testName,
             points: 50,
-            id_step: step // Assuming `step` is a global variable
+            step: step // Assuming `step` is a global variable
         })
     });
     const test = await response.json();
