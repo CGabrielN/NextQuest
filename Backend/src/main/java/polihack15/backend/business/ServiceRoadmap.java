@@ -40,4 +40,16 @@ public class ServiceRoadmap {
     public List<Roadmap> getAllRoadmapsByDomain(String domain) {
         return repoRoadmap.findAllByDomain(domain);
     }
+
+    public List<Roadmap> getFreeRoadmaps(String domain) {
+        return repoRoadmap.findFree(domain);
+    }
+
+    public List<Roadmap> getPayedRoadmaps(String domain) {
+        return repoRoadmap.findPayed(domain);
+    }
+
+    public Roadmap getRoadmapForUser(Long id_user) {
+        return repoRoadmap.findRoadmapForUser(id_user);
+    }
 }

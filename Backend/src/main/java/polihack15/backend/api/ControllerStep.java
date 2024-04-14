@@ -2,10 +2,7 @@ package polihack15.backend.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import polihack15.backend.business.ServiceStep;
 import polihack15.backend.model.Step;
 
@@ -22,4 +19,10 @@ public class ControllerStep {
     public ResponseEntity<List<Step>> getStepsForID(@PathVariable Long id_roadmap) {
         return ResponseEntity.ok(serviceStep.getStepsForId(id_roadmap));
     }
+
+    @PostMapping("/step")
+    public ResponseEntity<Step> save(@RequestBody Step step) {
+        return ResponseEntity.ok(serviceStep.save(step));
+    }
+
 }
