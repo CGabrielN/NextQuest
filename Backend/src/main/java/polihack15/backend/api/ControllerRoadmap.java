@@ -51,4 +51,19 @@ public class ControllerRoadmap {
     public ResponseEntity<List<Roadmap>> getAllRoadmapsByDomain(@PathVariable String domain) {
         return ResponseEntity.ok(serviceRoadmap.getAllRoadmapsByDomain(domain));
     }
+
+    @GetMapping("/roadmaps/getFreeRoadmaps/{domain}")
+    public ResponseEntity<List<Roadmap>> getFreeRoadmaps(@PathVariable String domain) {
+        return ResponseEntity.ok(serviceRoadmap.getFreeRoadmaps(domain));
+    }
+
+    @GetMapping("/roadmaps/getPayedRoadmaps/{domain}")
+    public ResponseEntity<List<Roadmap>> getPayedRoadmaps(@PathVariable String domain) {
+        return ResponseEntity.ok(serviceRoadmap.getPayedRoadmaps(domain));
+    }
+
+    @GetMapping("/roadmaps/getRoadmapForUser/{id_user}")
+    public ResponseEntity<Roadmap> getRoadmapForUser(@PathVariable Long id_user) {
+        return ResponseEntity.ok(serviceRoadmap.getRoadmapForUser(id_user));
+    }
 }

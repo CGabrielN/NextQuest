@@ -16,4 +16,8 @@ public class ServiceStep {
     public List<Step> getStepsForId(Long id_roadmap){
         return repoSteps.findByRoadmapId(id_roadmap);
     }
+
+    public Step save(Step step) {
+        return repoSteps.save(step);
+    }
 }
