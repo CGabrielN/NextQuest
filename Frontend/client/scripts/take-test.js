@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const backButton = document.getElementById('back_button');
+    const backButton = document.getElementById('logout_button');
     backButton.addEventListener('click', () => {
-        window.location.href = 'roadmaps.html';
+        window.location.href = 'roadmaps_main_window.html';
     });
 });
 
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     console.log(step);
 
-    var apiEndpoint = `http://192.168.35.38:8080/api/getTestForStep/${step.id}`;
+    var apiEndpoint = `http://localhost:8080/api/getTestForStep/${step.id}`;
 
     fetch(apiEndpoint)
         .then(response => response.json()) // Parse the response as JSON

@@ -3,100 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <style>
-        body {
-            background-image: url('../assets/background.jpeg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        #registerDiv {
-            background-color: rgba(0, 0, 0, 0.3);
-            height: 789px;
-            width: 1368px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            border-radius: 40px;
-        }
-
-        #registerForm {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .column {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            margin: 0 20px;
-        }
-
-        .column input {
-            display: block;
-            margin-bottom: 20px;
-        }
-
-        #registerForm input {
-            font-size: 20px;
-            font-family: Roboto, serif;
-            border-radius: 20px;
-            width: 500px;
-            padding: 10px;
-            margin: 20px 0;
-            height: 36px;
-        }
-
-        #registerForm button {
-            font-size: 31px;
-            font-family: Roboto, serif;
-            border-radius: 20px;
-            width: 277px;
-            height: 95px;
-            background-color: rgb(155, 182, 165);
-            padding: 10px;
-            margin: 40px;
-            cursor: pointer;
-            border: 0;
-        }
-
-        .column {
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
+    <link rel="stylesheet" href="../styles/register.css">
 </head>
 <body>
 <div>
     <form id="registerForm">
-        <div id="registerDiv">
-            <div class="column">
-                <input type="text" id="name" name="name" placeholder="Name" required>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-                <input type="date" id="dob" name="dob" placeholder="Date of Birth" required>
+        <div id="formDiv">
+            <h1 id="mainTitle">Welcome to NextQuest!</h1>
+            <div id="columnDiv">
+                <div class="column">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <div id="password-container">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                        <img src="../assets/eye.png" onclick="togglePasswordVisibility()" id="togglePassword">
+                    </div>
+                </div>
+                <div class="column">
+                    <input type="date" id="dob" name="dob" placeholder="Date of Birth" required>
+                    <input type="text" id="domain" name="domain" placeholder="Domain of Work" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                </div>
             </div>
-
-            <div class="column">
-                <input type="password" id="password" name="password" placeholder="Password" required>
-                <input type="text" id="domain" name="domain" placeholder="Domain of Work" required>
-                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
-            </div>
-            <button type="submit">Register</button>
-
+            <button id="registerButton" type="submit">Register</button>
+            <button type="button" class="back_button" onclick="goBackToLogin()">&#10554;</button>
         </div>
 
     </form>
-
-    <script src="../scripts/register.js"></script>
-
-
 </div>
+<script src="../scripts/register.js"></script>
 </body>
 </html>
