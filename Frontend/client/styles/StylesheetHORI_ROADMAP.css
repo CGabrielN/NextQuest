@@ -49,7 +49,7 @@ body {
 }
 
 /* Container around content */
-.container {
+.rightDiv {
     padding: 20px 80px;
     position: relative;
     background-color: inherit;
@@ -58,7 +58,7 @@ body {
 }
 
 /* The circles on the timeline */
-.container::after {
+.rightDiv::after {
     content: '';
     position: absolute;
     width: 25px;
@@ -203,14 +203,14 @@ body {
     }
 
     /* Full-width containers */
-    .container {
+    .rightDiv {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
     }
 
     /* Make sure that all arrows are pointing leftwards */
-    .container::before {
+    .rightDiv::before {
         left: 60px;
         border: medium solid white;
         border-width: 10px 10px 10px 0;

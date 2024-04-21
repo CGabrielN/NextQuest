@@ -18,33 +18,9 @@ public class ControllerRoadmap {
     @Autowired
     private ServiceRoadmap serviceRoadmap;
 
-    @GetMapping("/roadmapsP/{domain}")
-    public ResponseEntity<List<Roadmap>> getPaidRoadmapsByDomain(@PathVariable String domain) {
-        return ResponseEntity.ok(serviceRoadmap.getPaidRoadmapsByDomain(domain));
-    }
-
-    @GetMapping("/roadmapsF/{domain}")
-    public ResponseEntity<List<Roadmap>> getFreeRoadmapsByDomain(@PathVariable String domain) {
-        return ResponseEntity.ok(serviceRoadmap.getFreeRoadmapsByDomain(domain));
-    }
-    @GetMapping("/roadmapsP/{company}")
-    public ResponseEntity<List<Roadmap>> getPaidRoadmapsByCompany(@PathVariable String company) {
-        return ResponseEntity.ok(serviceRoadmap.getPaidRoadmapsByCompany(company));
-    }
-
-    @GetMapping("/roadmapsF/{company}")
-    public ResponseEntity<List<Roadmap>> getFreeRoadmapsByCompany(@PathVariable String company) {
-        return ResponseEntity.ok(serviceRoadmap.getFreeRoadmapsByCompany(company));
-    }
-
     @GetMapping("/roadmaps/getAll")
     public ResponseEntity<List<Roadmap>> getAllRoadmaps() {
         return ResponseEntity.ok(serviceRoadmap.getAllRoadmaps());
-    }
-
-    @GetMapping("/roadmaps/getAllByCompany/{company}")
-    public ResponseEntity<List<Roadmap>> getAllRoadmapsByCompany(@PathVariable String company) {
-        return ResponseEntity.ok(serviceRoadmap.getAllRoadmapsByCompany(company));
     }
 
     @GetMapping("/roadmaps/getAllByDomain/{domain}")
@@ -52,18 +28,30 @@ public class ControllerRoadmap {
         return ResponseEntity.ok(serviceRoadmap.getAllRoadmapsByDomain(domain));
     }
 
-    @GetMapping("/roadmaps/getFreeRoadmaps/{domain}")
-    public ResponseEntity<List<Roadmap>> getFreeRoadmaps(@PathVariable String domain) {
-        return ResponseEntity.ok(serviceRoadmap.getFreeRoadmaps(domain));
+    @GetMapping("/roadmaps/getFreeRoadmapsByDomain/{domain}")
+    public ResponseEntity<List<Roadmap>> getFreeRoadmapsByDomain(@PathVariable String domain) {
+        return ResponseEntity.ok(serviceRoadmap.getFreeRoadmapsByDomain(domain));
     }
 
-    @GetMapping("/roadmaps/getPayedRoadmaps/{domain}")
-    public ResponseEntity<List<Roadmap>> getPayedRoadmaps(@PathVariable String domain) {
-        return ResponseEntity.ok(serviceRoadmap.getPayedRoadmaps(domain));
+    @GetMapping("/roadmaps/getPayedRoadmapsByDomain/{domain}")
+    public ResponseEntity<List<Roadmap>> getPayedRoadmapsByDomain(@PathVariable String domain) {
+        return ResponseEntity.ok(serviceRoadmap.getPayedRoadmapsByDomain(domain));
     }
 
     @GetMapping("/roadmaps/getRoadmapForUser/{id_user}")
     public ResponseEntity<Roadmap> getRoadmapForUser(@PathVariable Long id_user) {
         return ResponseEntity.ok(serviceRoadmap.getRoadmapForUser(id_user));
     }
+
+    @GetMapping("/roadmaps/getFreeRoadmaps")
+    public ResponseEntity<List<Roadmap>> getFreeRoadmaps() {
+        return ResponseEntity.ok(serviceRoadmap.getFreeRoadmaps());
+    }
+
+    @GetMapping("/roadmaps/getPayedRoadmaps")
+    public ResponseEntity<List<Roadmap>> getPayedRoadmaps() {
+        return ResponseEntity.ok(serviceRoadmap.getPayedRoadmaps());
+    }
+
+
 }

@@ -1,9 +1,9 @@
 let questions = [];
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    const backButton = document.getElementById('back_button');
+    const backButton = document.getElementById('logout_button');
     backButton.addEventListener('click', () => {
-        window.location.href = 'roadmaps.html';
+        window.location.href = 'roadmaps_main_window.html';
     });
 });
 
@@ -82,7 +82,7 @@ document.getElementById('createTestButton').addEventListener('click', async () =
 
     console.log(step);
     // Create the test
-    const response = await fetch('http://192.168.35.38:8080/api/test', {
+    const response = await fetch('http://localhost:8080/api/test', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -99,7 +99,7 @@ document.getElementById('createTestButton').addEventListener('click', async () =
 
     // Create the questions
     for (const question of questions) {
-        const response = await fetch('http://192.168.35.38:8080/api/question', {
+        const response = await fetch('http://localhost:8080/api/question', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -115,7 +115,7 @@ document.getElementById('createTestButton').addEventListener('click', async () =
 
         // Create the responses
         for (const response of question.responses) {
-            await fetch('http://192.168.35.38:8080/api/response', {
+            await fetch('http://localhost:8080/api/response', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -3,7 +3,7 @@ stepCount = 0;
 document.addEventListener('DOMContentLoaded', (event) => {
     const backButton = document.getElementById('button');
     backButton.addEventListener('click', () => {
-        window.location.href = 'roadmaps.html';
+        window.location.href = 'roadmaps_main_window.html';
     });
 });
 
@@ -42,7 +42,7 @@ function createStep(name, courses) {
                 event.preventDefault();
 
                 // Define the API endpoint for the test
-                var apiEndpoint = 'http://192.168.35.38:8080/api/getTestForStep/1';
+                var apiEndpoint = 'http://localhost:8080/api/getTestForStep/1';
 
                 console.log(courses[i].link);
                 window.location.href = courses[i].link;
@@ -88,7 +88,7 @@ var data = JSON.parse(decodeURIComponent(dataString));
 var roadmapId = data[0].id; // Replace with the actual property name for the ID
 
 // Define the API endpoint for the roadmap components (steps)
-var apiEndpoint = `http://192.168.35.38:8080/api/getStepsForRoadmap/${roadmapId}`;
+var apiEndpoint = `http://localhost:8080/api/getStepsForRoadmap/${roadmapId}`;
 
 // Use fetch to get the data from the API endpoint
 fetch(apiEndpoint)

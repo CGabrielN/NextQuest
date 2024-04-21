@@ -38,7 +38,7 @@ document.getElementById('addStep').addEventListener('click', function() {
         console.log(data)
         let dat;
 
-        fetch('http://192.168.35.38:8080/api/step', {
+        fetch('http://localhost:8080/api/step', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -109,8 +109,8 @@ document.getElementById('saveRoadmap').addEventListener('click', function() {
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    const backButton = document.getElementById('back_button');
+    const backButton = document.getElementById('logout_button');
     backButton.addEventListener('click', () => {
-        window.location.href = 'roadmaps.html';
+        window.location.href = 'roadmaps_main_window.html';
     });
 });
