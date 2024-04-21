@@ -1,11 +1,9 @@
 let questions = [];
 
-
-
 document.addEventListener('DOMContentLoaded', (event) => {
-    const backButton = document.getElementById('back_button');
+    const backButton = document.getElementById('logout_button');
     backButton.addEventListener('click', () => {
-        window.history.back();
+        window.location.href = 'roadmaps_main_window.html';
     });
 });
 
@@ -80,11 +78,11 @@ document.getElementById('createTestButton').addEventListener('click', async () =
     const testName = document.getElementById('testNameInput').value;
 
     let urlParams = new URLSearchParams(window.location.search);
-    let step = urlParams.get('data');
+    let step = urlParams.get('step');
 
     console.log(step);
     // Create the test
-    const response = await fetch('http://192.168.35.38:8080/api/test', {
+    const response = await fetch('http://localhost:8080/api/test', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -93,7 +91,7 @@ document.getElementById('createTestButton').addEventListener('click', async () =
             test_id: null,
             name: testName,
             points: 50,
-            id_step: step // Assuming `step` is a global variable
+            step: step // Assuming `step` is a global variable
         })
     });
     const test = await response.json();
@@ -101,7 +99,7 @@ document.getElementById('createTestButton').addEventListener('click', async () =
 
     // Create the questions
     for (const question of questions) {
-        const response = await fetch('http://192.168.35.38:8080/api/question', {
+        const response = await fetch('http://localhost:8080/api/question', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -117,7 +115,7 @@ document.getElementById('createTestButton').addEventListener('click', async () =
 
         // Create the responses
         for (const response of question.responses) {
-            await fetch('http://192.168.35.38:8080/api/response', {
+            await fetch('http://localhost:8080/api/response', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+*{
+    font-family: Roboto, serif;
+}
+
+body {
+    background-image: url('../assets/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.backgroundDiv {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 789px;
+    width: 1368px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 40px;
+}
+
+h1 {
+    color: black;
+    font-size: 70px;
+    margin-bottom: 40px;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#loginForm input {
+    font-size: 20px;
+    border-radius: 20px;
+    width: 500px;
+    padding: 10px;
+    height: 36px;
+    margin: 50px 0 40px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 30px;
+    border: 1px solid #ccc;
+    text-indent: 40px;
+}
+
+#loginForm button {
+    font-size: 31px;
+    border-radius: 20px;
+    width: 277px;
+    height: 95px;
+    background-color: rgb(155, 182, 165);
+    padding: 10px;
+    margin: 120px 40px 40px;
+    cursor: pointer;
+    border: 0;
+}
+
+#loginForm input:active, input:focus{
+    outline: 2px solid #000000;
+}
+
+.email-input {
+    background-image: url('../assets/mail.png');
+}
+
+.password-input {
+    background-image: url('../assets/lock.png');
+}
+
+.register-link {
+    font-size: 31px;
+    color: white;
+    text-decoration: none;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+}
+
+#password-container {
+    position: relative;
+    display: inline-block;
+}
+
+#togglePassword {
+    position: absolute;
+    top: 53%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+

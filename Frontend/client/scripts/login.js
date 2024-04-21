@@ -1,24 +1,35 @@
+const BASE_API_URL = 'http://localhost:8080/api';
 
-document.getElementById('loginForm').addEventListener('submit', function(event) {
+document.getElementById('loginForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    const statusLabel = document.getElementById('status');
 
-    fetch(`http://192.168.35.38:8080/api/user/login/${email}/${password}`)
+    fetch(`${BASE_API_URL}/user/login/${email}/${password}`)
         .then(response => {
             if (response.ok) {
-                statusLabel.textContent = 'Success';
-                window.location.href = 'createTest.html?data= ' + encodeURIComponent(1);
-            } else {
-                statusLabel.textContent = 'Failed';
+                return response.json();
             }
-            return response.json();
+            throw new Error('Login failed');
         })
-        .then(data => console.log(data))
+        .then(user => {
+            window.location.href = 'roadmaps_main_window.html?user=' + encodeURIComponent(JSON.stringify(user));
+        })
         .catch(error => {
             console.error('Error:', error);
-            statusLabel.textContent = 'Error';
         });
 });
+
+function togglePasswordVisibility() {
+    let passwordInput = document.getElementById('password');
+    let togglePasswordIcon = document.getElementById('togglePassword');
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        togglePasswordIcon.src = "../assets/closed_eye.png";
+    } else {
+        passwordInput.type = "password";
+        togglePasswordIcon.src = "../assets/eye.png";
+    }
+}

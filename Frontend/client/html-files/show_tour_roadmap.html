@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/show_tour_roadmap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        .title_div {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            background-color: rgba(69, 178, 185, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            font-size: 40px;
+            z-index: 1; /* Set the z-index of the top div */
+        }
+
+        .main_div {
+            position: fixed;
+            top: 100px;
+            left: 0px;
+            width: 100%;
+            height: calc(100% - 100px);
+            background-color: #e9ecef;
+            overflow: auto;
+        }
+
+        .button {
+            position: absolute;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #45a29e;
+            border-radius: 20px;
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .content div {
+            margin-bottom: 10px;
+        }
+
+        .content div a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .content div a:hover {
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+<div class="title_div">
+    <p class="title_text_font">Your Roadmap</p>
+    <button class="button">Go to Roadmaps</button>
+</div>
+
+<div class="main_div">
+    <div class="timeline">
+        <!--        <button id="addStep">Add Step</button>-->
+        <!--        <div class="container left">-->
+        <!--            <div class="content">-->
+        <!--                <h2>2017</h2>-->
+        <!--                <p>Lorem ipsum..</p>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        <div class="container right">-->
+        <!--            <div class="content">-->
+        <!--                <h2>2016</h2>-->
+        <!--                <p>Lorem ipsum..</p>-->
+        <!--            </div>-->
+        <!--        </div>-->
+    </div>
+</div>
+<script src="../scripts/show_tour_roadmap.js"></script>
+
+</body>
+</html>

@@ -15,7 +15,6 @@ import org.hibernate.validator.constraints.Length;
 @Table(name = "roadmaps", schema = "public")
 public class Roadmap {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "roadmap_id")

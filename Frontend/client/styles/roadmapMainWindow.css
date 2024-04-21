@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, serif;
+}
+
+#headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 135px;
+    background-color: #a9dcdf;
+    width: 1920px;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 0 30px 0 30px;
+}
+
+.title_label {
+    font-size: 44px;
+    font-weight: bold;
+}
+
+#logout_button {
+    background-color: #728AAF;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    height: 65px;
+    width: 150px;
+    cursor: pointer;
+}
+
+#leftDivs {
+    width: 370px;
+    /*height: calc(100vh - 135px);*/
+    height: calc(1080px - 135px);
+    overflow: auto;
+    margin: 0;
+    text-align: center;
+}
+
+.topDiv {
+    width: 100%;
+    /*height: 50%;*/
+    height: 473px;
+    background-color: #DDFFFF;
+
+    position: relative;
+}
+
+
+.topDiv h2 {
+    padding-top: 5px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-top: 0;
+    font-size: calc(1.325rem + .9vw);
+}
+
+.bottomDiv {
+    width: 100%;
+    /*height: 50%;*/
+    height: 472px;
+    background-color: #bbffff;
+}
+
+.bottomDiv h2 {
+    margin-bottom: 10px;
+    padding-top: 30px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-top: 0;
+    font-size: calc(1.325rem + .6vw);
+}
+
+.bottomDiv input[type="text"] {
+    margin-bottom: 10px;
+    margin-top: 40px;
+    width: 80%;
+    height: 35px;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid #005EF5;
+    padding-left: 10px;
+    font-size: inherit;
+}
+
+.bottomDiv label{
+    margin: 5px 5px 5px 0;
+    width: 280px;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+#checkBoxesDiv{
+    padding-left: 35px;
+    margin: 15px 0;
+    height: auto;
+    line-height: 1.5;
+}
+
+.bottomDiv input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #005EF5;
+    border-radius: 50%;
+    outline: none;
+    position: relative;
+}
+
+.bottomDiv input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #005EF5;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.bottomDiv input[type="checkbox"]:checked::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.checkbox-pair{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.bottomDiv input[type="submit"] {
+    font-size: 1.2em;
+    padding: 5px 10px;
+    border-radius: 12px;
+    background-color: #728AAF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    margin: 20px 0 0 0;
+    width: 70%;
+    height: 50px;
+}
+
+#main {
+    display: flex;
+    /*height: calc(100vh - 135px);*/
+    height: calc(1080px - 135px);
+    width: 1920px;
+
+}
+
+.rightDiv{
+    /*height: calc(100vh - 135px);*/
+    /*height: calc(1080px - 135px);*/
+    width: 1550px;
+    margin: 20px;
+}
+
+#create_roadmap{
+    background-color: #728AAF;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    height: 65px;
+    width: 70%;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.cardLeft{
+    width: 90%;
+    margin: 0 5%;
+    border-radius: 20px;
+    background-color: white;
+    height: 300px;
+    cursor:pointer;
+}
+
+.cardLeft img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.cardLeft label{
+    width: 100%;
+    margin:10px 0 0 0;
+    line-height: normal;
+    display: inline-block;
+}
+
+.cardsContainer{
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    height: calc(1080px - 135px) ;
+    padding: 0 0 0 30px;
+}
+
+
+.generatedCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 200px;
+    border-radius: 15px;
+    border: 1px solid grey;
+    position: relative;
+}
+
+.generatedCard img{
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+}
+
+.generatedCard button{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 12px;
+}
+
+.generatedCard h6{
+    top: 55%;
+    position: absolute;
+    left: 20px;
+    font-size: 20px;
+}
+
+.difficultyLabel{
+    position: absolute;
+    bottom: 25%;
+    font-size: 20px;
+    left: 20px;
+}
+
+.priceLabel{
+    position: absolute;
+    bottom: 12%;
+    left: 20px;
+    font-size: 20px;
+
+}
+

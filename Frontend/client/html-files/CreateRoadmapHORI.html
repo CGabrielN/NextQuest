@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="StylesheetHORI_ROADMAP.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, serif;
+    }
+
+    #headerContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 143px;
+        background-color: #a9dcdf;
+        font-size: 20px;
+        padding-left: 20px;
+        font-weight: bold;
+    }
+
+    .title_label {
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    #logout_button{
+        background-color: #728AAF;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        height: 65px;
+        width: 150px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+    </style>
+</head>
+<body>
+<header>
+    <div id="headerLabel" >
+        <label id="user_name">Admin</label>
+        <label class="title_label">Add Roadmap</label>
+        <button id="back_button" >Go back</button>
+    </div>
+</header>
+<button id="saveRoadmap" class="saveRoadmap">Save Roadmap</button>
+<div class="timeline">
+    <button id="addStep" class="addStep">Add Step</button>
+    <div class="rightDiv left">
+        <div class="content">
+            <input placeholder="Name">
+            <input placeholder="Position">
+            <input placeholder="Add Content">
+            <button>Create Test</button>
+        </div>
+    </div>
+    <div class="rightDiv right">
+        <div class="content">
+            <input placeholder="Name">
+            <input placeholder="Position">
+            <input placeholder="Add Content">
+            <button>Create Test</button>
+        </div>
+    </div>
+</div>
+<script src="../scripts/create-roadmap.js">
+
+</script>
+</body>
+</html>
